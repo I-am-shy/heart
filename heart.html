@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱心</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: linear-gradient(rgb(255, 191, 201),rgb(255, 153, 153));
+        }
+        .heart{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            transform: rotateZ(45deg);
+            margin-top: 10px;
+            animation: run 1s infinite ease-in-out;
+        }
+        .heart::after{
+            content: "";
+            width: 50px;
+            height: 50px;
+            border-radius:50%  50% 0 0 ;
+            background-color: rgb(255, 0, 0);
+            position: absolute;
+            left: 0px;
+            top: -25px;
+        }
+        .heart::before{
+            content: "";
+            width: 50px;
+            height: 50px;
+            border-radius: 50% 0 0 50% ;
+            background-color: rgb(255, 0, 0);
+            position: absolute;
+            left: -25px;
+            top: 0px;
+        }
+        .heart:hover{
+            animation-play-state:paused;
+        }
+        .text{
+            font-size: 50px;
+            margin-top: 10%;
+            font-family: "宋体";
+            color: white;
+            animation: 8s change infinite ease-out;
+        }
+        @keyframes run{
+            0%{
+                transform: scale(1) rotateZ(45deg);
+            }50%{
+                transform: scale(2) rotateZ(45deg);
+            }100%{
+                transform: scale(1) rotateZ(45deg);
+            }
+        }
+        @keyframes change{
+            0%{
+                color: rgb(255, 255, 255);
+            }20%{
+                color: rgb(68, 168, 255);
+            }40%{
+                color: rgb(41, 255, 194);
+            }60%{
+                color: rgb(255, 102, 72);
+            }80%{
+                color: rgb(190, 255, 39);
+            }108%{
+                color: rgb(255, 255, 255);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="heart"></div>
+    </div>
+    <div class="text">
+        <span>送给dyl</span>
+    </div>
+</body>
+</html>
