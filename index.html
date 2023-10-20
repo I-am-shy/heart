@@ -123,13 +123,17 @@
                 span.innerText = "好吧"
                
             } if(count ==10){
+                x = e.x - 100;
+                y = e.y -100;
+                createHeart();
+                span.innerText =(count+1)+"个"
                 span.innerText = "最后一个"
                
             } if(count ==11){
                 span.innerText = "全部都给你"
                
             } if(count>=13){
-                window.location.replace("http://127.0.0.1:5501/css%E5%AE%9E%E4%BE%8B/heartplus.html");
+                window.location.replace("https://i-am-shy.github.io/heart/");
             }
            
         })
