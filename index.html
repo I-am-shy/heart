@@ -82,12 +82,12 @@
         <div class="heart"></div>
     </div>
     <div class="text">
-        <p>送给dyl</p>
+        <p>送给lyd</p>
         <span id="span">点击屏幕试试</span>
     </div>
     <script>
         let hearts=[];
-        let x,y,count = 1;
+        let x,y,count = 0;
         let span = document.getElementById("span")
         function createHeart(){
             let content= document.createElement("div");
@@ -106,7 +106,7 @@
                 x = e.x - 100;
                 y = e.y -100;
                 createHeart();
-                span.innerText = count+"个"
+                span.innerText =(count+1)+"个"
             } if(count ==5){
                 span.innerText = "没有了"
                 
@@ -128,8 +128,8 @@
             } if(count ==11){
                 span.innerText = "全部都给你"
                
-            } if(count>=12){
-                window.location.replace("https://i-am-shy.github.io/heart/");
+            } if(count>=13){
+                window.location.replace("http://127.0.0.1:5501/css%E5%AE%9E%E4%BE%8B/heartplus.html");
             }
            
         })
